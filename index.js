@@ -8,7 +8,7 @@ const bot = new VkBot({
   confirmation: 'e4766b31',
 });
 
-bot.event('message_new', (ctx) => {
+bot.on((ctx) => {
     switch(ctx.message){
         case 'Ты пидор':
             ctx.reply('Сам пидор');
@@ -17,6 +17,11 @@ bot.event('message_new', (ctx) => {
             ctx.reply('Хеллоу,епта')    
     }
   })
+
+  bot.command('Пошёл нахуй', (ctx) => {
+    ctx.reply('Ну и хули ты мне сделаешь, мешок кожаный?')
+  })
+
 
 app.use(bodyParser.json());
 
