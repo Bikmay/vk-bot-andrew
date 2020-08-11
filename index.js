@@ -9,7 +9,7 @@ const bot = new VkBot({
 });
 
 bot.on((ctx) => {
-    switch(ctx.message){
+    switch(ctx.message.text){
         case 'Ты пидор':
             ctx.reply('Сам пидор');
             break;
