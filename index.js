@@ -14,7 +14,11 @@ bot.on((ctx) => {
             ctx.reply('Сам пидор');
             break;
         case 'Привет':
-            ctx.reply('Хеллоу,епта')    
+            ctx.reply('Хеллоу,епта') 
+        break;
+        default:
+          ctx.reply('Не понел');
+          break;       
     }
   })
 
