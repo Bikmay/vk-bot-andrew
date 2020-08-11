@@ -8,9 +8,15 @@ const bot = new VkBot({
   confirmation: 'e4766b31',
 });
 
-bot.on((ctx) => {
-  ctx.reply('Hello!');
-});
+bot.event('message_new', (ctx) => {
+    switch(ctx.message){
+        case 'Ты пидор':
+            ctx.reply('Сам пидор');
+            break;
+        case 'Привет':
+            ctx.reply('Хеллоу,епта')    
+    }
+  })
 
 app.use(bodyParser.json());
 
