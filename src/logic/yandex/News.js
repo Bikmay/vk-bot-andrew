@@ -1,4 +1,4 @@
-export default class News {
+class News {
     
     static getTopNewsItem(){
         let request = new XMLHttpRequest();
