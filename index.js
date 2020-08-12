@@ -27,7 +27,7 @@ bot.on((ctx) => {
           break;       
     }}
     catch(e){
-      ctx.reply('ошибка')
+      ctx.reply(e.stack)
     }
   })
 
