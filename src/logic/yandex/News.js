@@ -8,14 +8,14 @@ class News {
         request.responseType = 'text';
         request.send();
         
-        let requestJson =JSON.parse(separationNewsRequest(request.responseText));
+        let requestJson =JSON.parse(this.separationNewsRequest(request.responseText));
         return requestJson[0].url;        
     }
 
     static separationNewsRequest(text){
         let tmp = text.substr(14);
         let tailIndex=text.indexOf('; var')+1;
-        return truncate(text,a);
+        return this.truncate(text,a);
     }
     static truncate(str, maxlength) {
         return (str.length > maxlength) ?
