@@ -20,8 +20,8 @@ class News {
 
     static separationNewsRequest(text){
         let tmp = text.substr(14);
-        let tailIndex=text.indexOf('; var')+1;
-        return this.truncate(text,a);
+        let tailIndex=tmp.indexOf('; var')+1;
+        return this.truncate(tmp,tailIndex);
     }
     static truncate(str, maxlength) {
         return (str.length > maxlength) ?
