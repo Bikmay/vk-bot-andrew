@@ -12,12 +12,12 @@ class News {
         return requestJson[0].url;        
     }
 
-    separationNewsRequest(text){
+    static separationNewsRequest(text){
         let tmp = text.substr(14);
         let tailIndex=text.indexOf('; var')+1;
         return truncate(text,a);
     }
-    truncate(str, maxlength) {
+    static truncate(str, maxlength) {
         return (str.length > maxlength) ?
           str.slice(0, maxlength - 1) + '' : str;
       }
