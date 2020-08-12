@@ -1,3 +1,5 @@
+import News from './src/logic/yandex/News';
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const VkBot = require('node-vk-bot-api/lib');
@@ -16,14 +18,13 @@ bot.on((ctx) => {
         case 'Привет':
             ctx.reply('Хеллоу,епта') 
         break;
+        case "Новость":
+          let newsItem = News.getTopNewsItem();
+          ctx.reply(newsItem);
         default:
           ctx.reply('Не понел');
           break;       
     }
-  })
-
-  bot.command('Пошёл нахуй', (ctx) => {
-    ctx.reply('Ну и хули ты мне сделаешь, мешок кожаный?')
   })
 
 

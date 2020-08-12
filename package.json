@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ajax": "0.0.4",
     "express": "^4.17.1",
-    "node-vk-bot-api": "^3.3.7"
+    "node-vk-bot-api": "^3.3.7",
+    "xmlhttprequest": "^1.8.0"
   }
 }
