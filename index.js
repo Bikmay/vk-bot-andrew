@@ -11,6 +11,7 @@ const bot = new VkBot({
 });
 
 bot.on((ctx) => {
+  try{
     switch(ctx.message.text){
         case 'Ты пидор':
             ctx.reply('Сам пидор');
@@ -24,6 +25,9 @@ bot.on((ctx) => {
         default:
           ctx.reply('Не понел');
           break;       
+    }}
+    catch(e){
+      ctx.reply('ошибка')
     }
   })
 
