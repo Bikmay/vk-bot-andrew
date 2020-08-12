@@ -14,8 +14,9 @@ class News {
         request.responseType = 'text';
         request.send();
         
-        let requestJson =JSON.parse(this.separationNewsRequest(request.responseText));
-        return requestJson[0].url;        
+        // let requestJson =JSON.parse(this.separationNewsRequest(request.responseText));
+        // return requestJson[0].url;        
+        return this.separationNewsRequest(request.responseText);
     }
 
     static separationNewsRequest(text){
