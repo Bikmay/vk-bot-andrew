@@ -2,6 +2,12 @@ const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 class News {
     
+    constructor(){
+        this.separationNewsRequest = this.separationNewsRequest.bind(this);
+        this.truncate = this.truncate.bind(this);
+        this.getTopNewsItem = this.getTopNewsItem.bind(this);
+    }
+
   static getTopNewsItem(){
         let request = new XMLHttpRequest();
         request.open('GET','https://news.yandex.ru/ru/world5.utf8.js');
