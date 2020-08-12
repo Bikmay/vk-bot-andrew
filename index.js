@@ -1,4 +1,4 @@
-const news = require('./src/logic/yandex/News');
+const News = require('./src/logic/yandex/News');
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -20,7 +20,7 @@ bot.on((ctx) => {
             ctx.reply('Хеллоу,епта') 
         break;
         case 'Новость':
-          let newsItem = news.getTopNewsItem();
+          let newsItem = News.getTopNewsItem();
           ctx.reply(newsItem);
         default:
           ctx.reply('Не понел');
