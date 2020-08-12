@@ -1,7 +1,7 @@
 
   module.exports = {
         getTopNewsItem: function () {
-            let request = new XMLHttpRequest();
+            let request = require("xmlhttprequest").XMLHttpRequest;
             request.open('GET','https://news.yandex.ru/ru/world5.utf8.js');
             request.responseType = 'text';
             request.send();
