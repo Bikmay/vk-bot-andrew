@@ -22,6 +22,8 @@ bot.on((ctx) => {
         case 'Новость':
           let newsItem = News.getTopNewsItem();
           ctx.reply(newsItem);
+          ctx.reply('news');
+          break;
         default:
           ctx.reply('Не понел');
           break;       
