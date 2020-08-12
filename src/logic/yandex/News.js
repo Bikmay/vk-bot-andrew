@@ -1,14 +1,15 @@
 
-    
-    function getTopNewsItem(){
-        let request = new XMLHttpRequest();
-        request.open('GET','https://news.yandex.ru/ru/world5.utf8.js');
-        request.responseType = 'text';
-        request.send();
-        
-        let requestJson =JSON.parse(separationNewsRequest(request.responseText));
-        return requestJson[0].url;        
-    }
+  module.exports = {
+        getTopNewsItem: function () {
+            let request = new XMLHttpRequest();
+            request.open('GET','https://news.yandex.ru/ru/world5.utf8.js');
+            request.responseType = 'text';
+            request.send();
+            
+            let requestJson =JSON.parse(separationNewsRequest(request.responseText));
+            return requestJson[0].url;  
+        }
+      };
 
     function separationNewsRequest(text){
         let tmp = text.substr(14);
@@ -19,5 +20,3 @@
         return (str.length > maxlength) ?
           str.slice(0, maxlength - 1) + '' : str;
       }
-
-      module.exports = getTopNewsItem;
