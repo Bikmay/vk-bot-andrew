@@ -1,6 +1,6 @@
-class News {
+
     
-    static getTopNewsItem(){
+    function getTopNewsItem(){
         let request = new XMLHttpRequest();
         request.open('GET','https://news.yandex.ru/ru/world5.utf8.js');
         request.responseType = 'text';
@@ -10,13 +10,12 @@ class News {
         return requestJson[0].url;        
     }
 
-    separationNewsRequest(text){
+    function separationNewsRequest(text){
         let tmp = text.substr(14);
         let tailIndex=text.indexOf('; var')+1;
         return truncate(text,a);
     }
-    truncate(str, maxlength) {
+    function truncate(str, maxlength) {
         return (str.length > maxlength) ?
           str.slice(0, maxlength - 1) + '' : str;
       }
-}
