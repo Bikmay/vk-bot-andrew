@@ -19,7 +19,7 @@ bot.on((ctx) => {
         case 'Привет':
             ctx.reply('Хеллоу,епта') 
         break;
-        case "Новость":
+        case 'Новость':
           let newsItem = news.getTopNewsItem();
           ctx.reply(newsItem);
         default:
