@@ -6,7 +6,17 @@ export default class News {
         request.responseType = 'text';
         request.send();
         
-        let requestJson =JSON.parse(request.responseText);
-        return requestJsonp[0].url;        
+        let requestJson =JSON.parse(separationNewsRequest(request.responseText));
+        return requestJson[0].url;        
     }
+
+    separationNewsRequest(text){
+        let tmp = text.substr(14);
+        let tailIndex=text.indexOf('; var')+1;
+        return truncate(text,a);
+    }
+    truncate(str, maxlength) {
+        return (str.length > maxlength) ?
+          str.slice(0, maxlength - 1) + '' : str;
+      }
 }
